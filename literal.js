@@ -54,7 +54,7 @@ let user = new User(1, 'Mohan', 'Noida');
 user.showDetails();
 
 
-// Class
+// Classes are sugarcoated custructor function;
 class User2 {
     constructor(id, name) {
         this.id = id;

@@ -6,5 +6,3 @@ class User {
 }
 
 exports.User = User;
-
-function Add(x, y) { return x + y; }

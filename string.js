@@ -9,7 +9,7 @@ Sequiea expedita perspiciatis consectetur ipsa harum dignissimos laborum, corpor
 
 console.log(str1.lastIndexOf("ipsum"));
 
-
+// Palindrome
 let str = "nitin";
 let flag = 1;
 
