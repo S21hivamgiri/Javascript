@@ -54,7 +54,7 @@ let user = new User(1, 'Mohan', 'Noida');
 user.showDetails();
 
 
-
+// Class
 class User2 {
     constructor(id, name) {
         this.id = id;
@@ -71,16 +71,19 @@ class User2 {
     showDetails() {
         console.log(`Id:${this.id},FullName: ${this.name}`);
     }
-    // showdetails = () =>{
-    //    console.log(`Id:${this.id},FullName: ${this.name}, Addrress ${this.getAddress()}`);
-    // }
+    showAllDetails = () =>{
+       console.log(`All Details: Id:${this.id},FullName: ${this.name}`);
+    }
 }
 let user1 = new User2(1, 'Mohan');
 user1.showDetails();
+user1.showAllDetails();
 
 
-//// Prototype
+
+//// Function Prototype
 function User3(id, name) {
+    address = 'japan'
     this.id = id;
     this.name = name;
 }
@@ -89,9 +92,10 @@ User3.prototype.showDetails = function () {
     console.log(`Id:${this.id},FullName: ${this.name}`);
 }
 
-// User3.prototype.showdetails = () =>{
-//    console.log(`Id:${this.id},FullName: ${this.name}, Addrress ${this.getAddress()}`);
-// }
+User3.prototype.allShowDetails = function(){
+    console.log(`Id:${this.id},FullName: ${this.name}, Address ${address}`);
+}
 
-let user2 = new User(1, 'Mohan');
+let user2 = new User3(1, 'Mohan');
 user2.showDetails();
+user2.allShowDetails();
