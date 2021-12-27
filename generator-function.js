@@ -11,5 +11,7 @@ const gen = generator(10);
 console.log(gen.next().value);
 // expected output: 10
 
+console.log("hello everyone.")
+
 console.log(gen.next().value);
 // expected output: 20
