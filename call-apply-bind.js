@@ -6,6 +6,9 @@ var obj = { name: "Sandy" };
 console.log(sayHello.call(obj));
 // Returns "Hello Sandy"
 
+
+
+
 var person = {
     age: 23,
     getAge: function () {
@@ -14,6 +17,8 @@ var person = {
 }
 var person2 = { age: 54 };
 console.log( person.getAge.call(person2))
+
+
 
 //Call with Arguement
 function saySomething(message, bold) {
@@ -56,13 +61,16 @@ console.log(z.bind(b,"India")());
 
 
 
+powerLevel=2;
 let hero = {
-    powerLevel: 99,
+
+    powerLevel:10,
     getPower() {
         return this.powerLevel;
     }
 }
 let getPower = hero.getPower;
 let hero2 = { powerLevel: 42 };
-console.log(getPower());// Return undefined
+console.log(getPower());
+console.log(hero.getPower());
 console.log(getPower.call(hero2));
