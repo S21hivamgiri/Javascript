@@ -5,7 +5,7 @@ console.log(company);
 let str1 = `Lorem ipsum, dolor sit amet consectetur adipisicing ipsum elit.
 Sequiea expedita perspiciatis consectetur ipsa harum dignissimos laborum, corporis voluptates minus alias,
  cum sint animi amet repellendus ut sunt unde magni distinctio, mollitia nisi ? Earum quis soluta voluptas 
- ratione ipsum aperiam reiciendis ?`;
+ ratione ipsum aperiam reiciendis ?`;// Known as template literals
 
 console.log(str1.lastIndexOf("ipsum"));
 

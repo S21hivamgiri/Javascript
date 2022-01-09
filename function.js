@@ -39,3 +39,55 @@ console.log(`Name:${obj1.name},address:${obj1.address}`);
     console.log(`Name:${param.name},address:${param.address}`);
 }
 )(obj1);
+
+
+// Arrow function- Preserve the this
+video = {
+    title: 'title',
+    arr: [1, 2, 3, 4, 4],
+    getTitle() {
+        this.arr.forEach(() => {
+            console.log(this.title)// Point to functional this
+        });
+    }
+}
+video.getTitle();
+
+//factory functtion returns a object with functon/ members
+
+function createFunction(radius) {
+    return {
+        radius,
+        getArea() {
+            console.log(this.radius * this.radius * Math.PI)
+        }
+    }
+}
+createFunction(7).getArea();
+
+
+// Constructor function()
+function Circle(radius) {
+    this.radius = radius;
+    this.getArea = () => {
+        console.log(this.radius * this.radius * Math.PI)
+    }
+}
+let circle = new Circle(7).getArea();
+
+//getter-setter
+const data = {
+    firstName: 'Shivam',
+    lastName: 'Giri',
+    get fullName() {
+        return `${this.firstName} ${this.lastName}`
+    },
+    set fullName(value) {
+        first = value.split(' ');
+        this.firstName = first[0];
+        this.lastName = first[1];
+    }
+}
+console.log(data.fullName)
+data.fullName = "Mayank Jha"
+console.log(data.fullName)
